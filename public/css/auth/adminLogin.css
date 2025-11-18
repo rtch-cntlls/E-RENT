@@ -1,0 +1,38 @@
+.adminlogin h4{
+    color: rgb(78, 148, 209);
+}
+.adminlogin input::placeholder{
+    font-size: 14px;
+}
+.adminlogin input{
+    font-size: 14px;
+}
+.adminlogin .btn-admin{
+    background-color: rgb(64, 153, 231);
+    color: white;
+    font-weight: bold;
+}
+.adminlogin {
+    position: relative;
+    background: url('/images/admin-login.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.adminlogin::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(10px);
+    transform: scale(1.1);
+    z-index: 0;
+}
+.adminlogin > * {
+    position: relative;
+    z-index: 1;
+}
+.adminlogin .col-md-7 {
+    background: url('/images/admin-login.jpg') center/cover no-repeat;
+    position: relative;
+    color: white;
+}
