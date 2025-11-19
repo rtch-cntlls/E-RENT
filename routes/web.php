@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Middleware\AdminAuth;
+use App\Http\Controllers\Guest\LandingPageController;
+use App\Http\Controllers\Auth\GuestLoginController;
 
 Route::prefix('admin')->group(function () {
     Route::get('login', [AdminLoginController::class, 'index'])->name('admin.login');
@@ -13,4 +15,11 @@ Route::prefix('admin')->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
         Route::post('logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
     });
+});
+
+Route::get('/', [LandingPageController::class, 'index'])->name('guest.landing');
+
+Route::prefix('guest')->group(function () {
+    Route::get('login', [GuestLoginController::class, 'index'])->name('guest.login');
+    Route::post('login', [GuestLoginController::class, 'login'])->name('guest.login.submit');
 });

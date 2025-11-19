@@ -1,0 +1,57 @@
+{
+    "property_types": {
+      "residential": [
+        "House and Lot",
+        "Condominium Unit",
+        "Townhouse",
+        "Apartment",
+        "Studio Unit",
+        "Dormitory Room",
+        "Boarding House Room",
+        "Villa",
+        "Bungalow",
+        "Penthouse Unit",
+        "Loft Type Unit",
+        "Room for Rent",
+        "Shared Room / Bedspace",
+        "Bahay Kubo / Native House",
+        "Rest House"
+      ],
+      "commercial": [
+        "Office Space",
+        "Commercial Space / Shop Space",
+        "Retail Stall / Kiosk",
+        "Warehouse",
+        "Industrial Space",
+        "Restaurant Space",
+        "Commercial Kitchen",
+        "Coworking Space",
+        "Clinic Space",
+        "Service Center Space"
+      ],
+      "short_term": [
+        "Entire Home (Short-Term)",
+        "Private Room",
+        "Shared Room",
+        "Serviced Apartment",
+        "Vacation House",
+        "Beach House",
+        "Transient Room",
+        "Cabin",
+        "Cottage",
+        "Farm Stay",
+        "Resort Villa"
+      ],
+      "special_use": [
+        "Event Venue / Function Hall",
+        "Conference Space",
+        "Training Room",
+        "Parking Space",
+        "Garage",
+        "Storage Unit",
+        "Agricultural Land",
+        "Farm Land"
+      ]
+    }
+  }
+  

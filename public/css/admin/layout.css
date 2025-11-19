@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+}
+.navbar {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 10px 20px;
+    height: 60px;
+}
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+.nav-link {
+    font-weight: 500;
+    margin-left: 18px;
+    padding-bottom: 4px;
+    transition: all 0.2s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #111827 !important;
+    border-bottom: 2px solid #2563eb;
+}
+.notification {
+    position: relative;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.content-wrapper {
+    background: #ffffff;
+    min-height: 80vh;
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    animation: fadeIn 0.2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
