@@ -1,76 +1,11 @@
 @extends('layouts.admin')
 @section('title', 'Dashboard')
 @section('content')
-<div class="container-fluid">
-    <h1 class="mb-4">Admin Dashboard</h1>
-
-    <!-- Analytics Cards -->
-    <div class="row g-4">
-        <!-- Total Listers -->
-        <div class="col-md-3 col-sm-6">
-            <div class="card shadow-sm border-0">
-                <div class="card-body d-flex align-items-center">
-                    <div class="me-3">
-                        <i class="fas fa-users fa-2x text-primary"></i>
-                    </div>
-                    <div>
-                        <h6 class="card-title mb-1 text-muted">Total Listers</h6>
-                        <h4 class="mb-0">128</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Total Properties -->
-        <div class="col-md-3 col-sm-6">
-            <div class="card shadow-sm border-0">
-                <div class="card-body d-flex align-items-center">
-                    <div class="me-3">
-                        <i class="fas fa-building fa-2x text-success"></i>
-                    </div>
-                    <div>
-                        <h6 class="card-title mb-1 text-muted">Properties</h6>
-                        <h4 class="mb-0">54</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Active Listings -->
-        <div class="col-md-3 col-sm-6">
-            <div class="card shadow-sm border-0">
-                <div class="card-body d-flex align-items-center">
-                    <div class="me-3">
-                        <i class="fas fa-check-circle fa-2x text-warning"></i>
-                    </div>
-                    <div>
-                        <h6 class="card-title mb-1 text-muted">Active Listings</h6>
-                        <h4 class="mb-0">42</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Registered Users -->
-        <div class="col-md-3 col-sm-6">
-            <div class="card shadow-sm border-0">
-                <div class="card-body d-flex align-items-center">
-                    <div class="me-3">
-                        <i class="fas fa-user-check fa-2x text-danger"></i>
-                    </div>
-                    <div>
-                        <h6 class="card-title mb-1 text-muted">Users</h6>
-                        <h4 class="mb-0">245</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Charts -->
+<div class="container-fluid px-5">
+    <h5 class="mb-3 fw-bold">Admin Dashboard</h5>
+    @include('admin.pages.dashboard.includes.cards')
+    @include('admin.pages.dashboard.includes.table')
     <div class="row mt-4 g-4">
-
-        <!-- Total Listers Over Time (Line Chart) -->
         <div class="col-12 col-lg-6">
             <div class="card shadow-sm border-0">
                 <div class="card-body">
