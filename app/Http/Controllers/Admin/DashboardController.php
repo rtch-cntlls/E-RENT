@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Property;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class DashboardController extends Controller
 {
@@ -50,6 +51,30 @@ class DashboardController extends Controller
             ->take(5)
             ->get();
 
-        return view('admin.pages.dashboard.index', compact('cards', 'recentListers', 'commonProperties'));
+            $monthlyUsers = User::select(
+                DB::raw('MONTH(created_at) as month'),
+                DB::raw('COUNT(*) as count')
+            )
+            ->where('role', 'user')
+            ->whereYear('created_at', Carbon::now()->year)
+            ->groupBy('month')
+            ->orderBy('month')
+            ->get();
+    
+        // Format data for chart
+        $months = [];
+        $userCounts = [];
+        for ($i = 1; $i <= 12; $i++) {
+            $months[] = Carbon::create()->month($i)->format('M');
+            $userCounts[] = $monthlyUsers->firstWhere('month', $i)->count ?? 0;
+        }
+    
+        return view('admin.pages.dashboard.index', compact(
+            'cards', 
+            'recentListers', 
+            'commonProperties',
+            'months',
+            'userCounts'
+        ));
     }
 }

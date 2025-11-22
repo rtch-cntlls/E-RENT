@@ -2,7 +2,7 @@
     <div class="col-12 col-lg-6">
         <div class="card shadow-sm border-0 ">
             <div class="card-body">
-                <h6 class="card-title mb-3 text-secondary fw-semibold">Recent Listers</h6>
+                <h6 class="card-title mb-3 fw-bold">Recent Listers</h6>
                 <div class="table-responsive">
                     @if(!empty($recentListers) && $recentListers->count())
                         <table class="table align-middle mb-0">
@@ -43,7 +43,7 @@
     <div class="col-12 col-lg-6">
         <div class="card shadow-sm border-0">
             <div class="card-body">
-                <h6 class="card-title mb-3 text-secondary fw-semibold">Most Common Properties Listed</h6>
+                <h6 class="card-title mb-3 fw-bold">Most Common Properties Listed</h6>
                 <div class="table-responsive">
                     @if(!empty($commonProperties) && $commonProperties->count())
                         <table class="table align-middle mb-0">
