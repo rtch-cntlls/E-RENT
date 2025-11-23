@@ -1,6 +1,9 @@
 body {
     font-family: sans-serif;
 }
+.logo{
+    color: rgb(78, 148, 209);
+}
 .navbar {
     border-bottom: 1px solid #e5e7eb;
     height: 60px;

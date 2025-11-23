@@ -11,8 +11,9 @@
 <body>
     <nav class="navbar navbar-expand-lg p-5 sticky-top bg-white">
         <div class="container-fluid d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="#">
-                E-rent
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="{{ asset('images/logo.png') }}" alt="E-Rent Logo" width="40">
+               <span class="logo">E</span><span class="text-danger">-rent</span>
             </a>
             <ul class="navbar-nav mx-auto d-flex flex-row">
                 <li class="nav-item dropdown">
@@ -117,7 +118,8 @@
     </nav>
     <main class="container-fluid px-5 mt-4">
         @yield('content')
-    </main>
+    </main>  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

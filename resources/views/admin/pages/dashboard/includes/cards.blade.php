@@ -4,7 +4,7 @@
             <div class="card shadow-sm border-0">
                 <div class="card-body d-flex align-items-center">
                     <div class="me-3">
-                        <i class="{{ $card['icon'] }} fa-2x {{ $card['color'] }}"></i>
+                        <i class="{{ $card['icon'] }} fa-2x"></i>
                     </div>
                     <div>
                         <h6 class="card-title mb-1 text-muted">{{ $card['title'] }}</h6>
