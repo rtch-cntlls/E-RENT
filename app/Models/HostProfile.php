@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class HostProfile extends Model
 {
-
     protected $fillable = [
         'user_id',
         'phone',

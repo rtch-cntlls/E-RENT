@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title', 'Dashboard')
 @section('content')
-<div class="container-fluid px-5 mb-5">
+<div class="container">
     <h4 class="mb-3 fw-bold">Overview Dashboard</h4>
     @include('admin.pages.dashboard.includes.cards')
     @include('admin.pages.dashboard.includes.table')

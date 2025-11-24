@@ -29,7 +29,7 @@ class User extends Model
 
     public function hostProfile()
     {
-        return $this->hasOne(ListerProfile::class);
+        return $this->hasOne(HostProfile::class);
     }
 
     protected $with = ['hostProfile'];
