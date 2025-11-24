@@ -1,4 +1,4 @@
-<div class="col-md-6">
+<div class="col-md-12">
     <div class="card shadow-sm border-0 mt-4">
         <div class="card-body">
             <h6 class="fw-bold mb-4">Top Property Types Uploaded</h6>
@@ -10,4 +10,4 @@
         </div>
     </div>
 </div>
-<script src="{{ asset('script/admin/chart/propertyType.js')}}"></script>
+<script src="{{ asset('script/admin/chart/propertyType.js') }}"></script>

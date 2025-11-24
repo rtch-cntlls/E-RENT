@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password')->nullable();
-            $table->enum('role', ['user', 'lister'])->default('user');
+            $table->enum('role', ['user', 'host'])->default('user');
             $table->boolean('is_verified')->default(false);
             $table->string('google_id')->nullable()->unique();
             $table->string('avatar')->nullable();

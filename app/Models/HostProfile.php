@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ListerProfile extends Model
+class HostProfile extends Model
 {
 
     protected $fillable = [

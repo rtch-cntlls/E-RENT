@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const ctx = document.getElementById('propertyTypesChart');
-    if (!ctx) return;
+    const canvas = document.getElementById('propertyTypesChart');
+    if (!canvas) return;
 
-    const labels = JSON.parse(ctx.dataset.labels);
-    const dataCounts = JSON.parse(ctx.dataset.values);
+    const labels = JSON.parse(canvas.dataset.labels);
+    const dataCounts = JSON.parse(canvas.dataset.values);
 
-    new Chart(ctx, {
+    new Chart(canvas, {
         type: 'radar',
         data: {
             labels: labels,

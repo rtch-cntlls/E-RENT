@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/admin/layout.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg p-5 sticky-top bg-white">
@@ -29,8 +30,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item d-flex align-items-center p-3" href="#">
-                                <i class="fas fa-user-tie me-3"></i> Lister Analytics
+                            <a class="dropdown-item d-flex align-items-center p-3" href="{{ route('admin.host') }}">
+                                <i class="fas fa-user-tie me-3"></i> Hosts Analytics
                             </a>
                         </li>
                         <li>
@@ -45,30 +46,9 @@
                         </li>
                     </ul>                    
                 </li>
-                <li class="nav-item dropdown">
-                   <a class="text-dark nav-link d-flex align-items-center" href="#" id="dashboardDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Listers
-                        <i class="ms-1 fas fa-chevron-down fa-xs"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-wide" aria-labelledby="listersDropdown">
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center p-3" href="#">
-                                <i class="far fa-user me-3"></i> All Listers
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center p-3" href="#">
-                                <i class="fas fa-user-check me-3"></i> Verified Listers
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center p-3" href="#">
-                                <i class="fas fa-user-clock me-3"></i> Pending Approval
-                            </a>
-                        </li>
-                    </ul>
-                </li>                
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.hosts.index') }}"> Hosts</a>
+                </li>              
                 <li class="nav-item">
                     <a class="nav-link" href="#">Properties</a>
                 </li>
@@ -119,7 +99,6 @@
     <main class="container-fluid px-5 mt-4">
         @yield('content')
     </main>  
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

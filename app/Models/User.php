@@ -27,10 +27,10 @@ class User extends Model
         'email_verified_at' => 'datetime',
     ];
 
-    public function listerProfile()
+    public function hostProfile()
     {
         return $this->hasOne(ListerProfile::class);
     }
 
-    protected $with = ['listerProfile'];
+    protected $with = ['hostProfile'];
 }

@@ -2,9 +2,9 @@
     <div class="col-12 col-lg-6">
         <div class="card shadow-sm border-0 ">
             <div class="card-body">
-                <h6 class="card-title mb-3 fw-bold">Recent Listers</h6>
+                <h6 class="card-title mb-3 fw-bold">Recent Host</h6>
                 <div class="table-responsive">
-                    @if(!empty($recentListers) && $recentListers->count())
+                    @if(!empty($recenthost) && $recenthost->count())
                         <table class="table align-middle mb-0">
                             <thead class="table-light text-uppercase text-muted small">
                                 <tr>
@@ -15,13 +15,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($recentListers as $lister)
+                                @foreach($recenthost as $host)
                                 <tr class="align-middle hover-shadow">
-                                    <td class="fw-medium">{{ $lister->name }}</td>
-                                    <td>{{ $lister->email }}</td>
-                                    <td>{{ $lister->created_at->format('M d, Y') }}</td>
+                                    <td class="fw-medium">{{ $host->name }}</td>
+                                    <td>{{ $host->email }}</td>
+                                    <td>{{ $host->created_at->format('M d, Y') }}</td>
                                     <td>
-                                        @if($lister->is_verified)
+                                        @if($host->is_verified)
                                             <span class="badge rounded-pill text-bg-success">Verified</span>
                                         @else
                                             <span class="badge rounded-pill text-bg-warning text-dark">Pending</span>
@@ -33,7 +33,7 @@
                         </table>
                     @else
                         <div class="text-center text-muted py-3">
-                            No recent listers found.
+                            No recent host found.
                         </div>
                     @endif
                 </div>
