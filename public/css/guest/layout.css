@@ -3,11 +3,9 @@
     padding-bottom: 3px;
     transition: color 0.3s ease;
 }
-
 .modern-link:hover {
     color: #0d6efd !important;
 }
-
 .modern-link::after {
     content: "";
     position: absolute;
@@ -18,7 +16,18 @@
     background-color: #0d6efd;
     transition: width 0.3s ease;
 }
-
 .modern-link:hover::after {
     width: 100%;
+}
+.page-fade {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

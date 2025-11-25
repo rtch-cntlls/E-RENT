@@ -26,7 +26,7 @@
                         <td>{{ $host->hostProfile->phone ?? '-' }}</td>
                         <td>
                             <span class="badge {{ $host->hostProfile && $host->hostProfile->status ? 'bg-success' : 'bg-secondary' }}">
-                                {{ $host->hostProfile && $host->hostProfile->status ? 'Active' : 'Inactive' }}
+                                {{ $host->hostProfile && $host->hostProfile->status }}
                             </span>
                         </td>
                         <td>{{ $host->properties_count ?? 0 }}</td>

@@ -1,8 +1,8 @@
 @extends('layouts.guest')
 @section('title', 'Home')
 @section('content')
-<section  id="home"
-    class="text-white d-flex align-items-center" 
+@include('components.sweetAlert')
+<section  id="home" class="text-white d-flex align-items-center" 
     style="min-height: 100vh; 
           background: url('https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
            position: relative;">

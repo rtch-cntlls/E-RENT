@@ -22,11 +22,21 @@ class GuestLoginController extends Controller
 
         if (Auth::guard('web')->attempt($credentials, $request->remember)) {
             $request->session()->regenerate();
-            return redirect()->intended(route('guest.landing'));
+            return redirect()->intended(route('guest.landing'))->with('success', 'Logged in successfully.');
         }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('guest.landing')->with('success', 'Logged out successfully.');
     }
 }
