@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lister_profiles');
+        Schema::dropIfExists('host_profiles');
     }
 };

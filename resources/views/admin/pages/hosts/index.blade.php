@@ -25,10 +25,19 @@
                         <td>{{ $host->email }}</td>
                         <td>{{ $host->hostProfile->phone ?? '-' }}</td>
                         <td>
-                            <span class="badge {{ $host->hostProfile && $host->hostProfile->status ? 'bg-success' : 'bg-secondary' }}">
-                                {{ $host->hostProfile && $host->hostProfile->status }}
-                            </span>
-                        </td>
+                            @if($host->hostProfile)
+                                <span class="badge 
+                                    @if($host->hostProfile->status === 'approved') bg-success
+                                    @elseif($host->hostProfile->status === 'pending') bg-info
+                                    @elseif($host->hostProfile->status === 'rejected') bg-danger
+                                    @else bg-secondary @endif
+                                ">
+                                    {{ ucfirst($host->hostProfile->status) }}
+                                </span>
+                            @else
+                                <span class="badge bg-secondary">N/A</span>
+                            @endif
+                        </td>                        
                         <td>{{ $host->properties_count ?? 0 }}</td>
                         <td>{{ $host->created_at->format('M d, Y') }}</td>
                         <td>

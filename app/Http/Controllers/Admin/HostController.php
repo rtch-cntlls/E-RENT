@@ -10,7 +10,7 @@ class HostController extends Controller
 {
     public function index()
     {
-        $hosts = User::where('role', 'host')->get();
+        $hosts = User::get();
         return view('admin.pages.hosts.index', compact('hosts'));
     } 
 

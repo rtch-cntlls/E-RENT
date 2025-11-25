@@ -11,11 +11,11 @@
                 </div>
                 <h5 class="text-center fw-semibold mb-4 text-dark">Welcome back</h5>
                 <div class="mb-3">
-                    <a href="" 
-                       class="btn btn-dark w-100 d-flex align-items-center justify-content-center gap-2 rounded-pill">
+                    <a href="{{ route('login.google') }}" 
+                        class="btn btn-dark w-100 d-flex align-items-center justify-content-center gap-2 rounded-pill">
                         <img src="https://www.google.com/favicon.ico" alt="Google" width="18">
                         Continue with Google
-                    </a>
+                    </a>                 
                 </div>
                 <div class="d-flex align-items-center my-3">
                     <hr class="flex-grow-1 border-muted">

@@ -6,6 +6,7 @@
     <title>@yield('title', 'E-rent') - Find Your Perfect Rental Home</title>
     <meta name="description" content="Discover beautiful apartments, houses, and condos for rent. Modern living starts here.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="{{ asset('css/guest/layout.css')}}">
 </head>
@@ -31,28 +32,44 @@
                     <div class="dropdown">
                         <a href="#" class="d-flex align-items-center text-decoration-none" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="{{ auth()->user()->avatar ?? asset('images/profile.jpg') }}" 
-                                 alt="Profile" width="40" height="40" class="rounded-circle me-2 border border-dark">
+                                alt="Profile" width="30" height="30" class="rounded-circle">
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                        <ul class="dropdown-menu dropdown-menu-end p-3 mt-3 shadow-sm" aria-labelledby="userDropdown" style="min-width: 280px;">
+                           <a class="dropdown-item py-2 rounded" href="">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div>
+                                        <img src="{{ auth()->user()->avatar ?? asset('images/profile.jpg') }}" 
+                                        alt="Profile Picture" width="60" height="60" class="rounded-circle mb-2">
+                                    </div>
+                                    <div>
+                                        <p class="m-0 fw-semibold">{{ auth()->user()->name }}</p>
+                                        <p class="m-0" style="font-size: 12px;">
+                                            @if(auth()->user()->role === 'user')
+                                                Personal Account
+                                            @elseif(auth()->user()->role === 'host')
+                                                Host Account
+                                            @endif
+                                        </p>
+                                        <p class="m-0" style="font-size: 13px;">{{ auth()->user()->email }}</p>
+                                    </div>
+                                </div>
+                           </a> 
+                           <a class="dropdown-item fw-medium rounded" href="{{ route('guest.upgrade.form') }}">
+                                Convent to host account
+                            </a><hr>
                             <li>
-                                <a class="dropdown-item" href="}">
-                                    <i class="bi bi-person-circle me-2"></i> Profile
+                                <a class="dropdown-item fw-semibold rounded py-2" href="{{ route('guest.settings') }}">
+                                    Account Settings
                                 </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="">
-                                    <i class="bi bi-card-checklist me-2"></i> My Bookings
-                                </a>
-                            </li>
-                            <li><hr class="dropdown-divider"></li>
+                            </li>                 
                             <li>
                                 <form action="{{ route('guest.logout') }}" method="POST">
                                     @csrf
-                                    <button type="submit" class="dropdown-item text-danger">
-                                        <i class="bi bi-box-arrow-right me-2"></i> Logout
+                                    <button type="submit" class="dropdown-item fw-medium py-2 rounded">
+                                        Logout
                                     </button>
                                 </form>
-                            </li>
+                            </li>                            
                         </ul>
                     </div>
                 @endauth
@@ -68,7 +85,7 @@
     <main class="pt-5">
         @yield('content')
     </main>
-    <footer id="contact" class="border border-top py-5 mt-5">
+    {{-- <footer id="contact" class="border border-top py-5 mt-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
@@ -105,7 +122,7 @@
                 &copy; 2025 E-rent. All rights reserved.
             </div>
         </div>
-    </footer>
+    </footer> --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

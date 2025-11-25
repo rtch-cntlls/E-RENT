@@ -17,6 +17,6 @@ class LandingPageController extends Controller
             $allTypes = array_merge($allTypes, $types);
         }
 
-        return view('guest.landing.index', compact('allTypes'));
+        return view('guest.pages.landing.index', compact('allTypes'));
     }
 }

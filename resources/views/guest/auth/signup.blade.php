@@ -11,7 +11,7 @@
                 </div>
                 <h5 class="text-center fw-semibold mb-4 text-dark">Create your account</h5>
                 <div class="mb-3">
-                    <a href="" 
+                    <a href="{{ route('login.google') }}" 
                        class="btn btn-dark w-100 d-flex align-items-center justify-content-center gap-2 rounded-pill">
                         <img src="https://www.google.com/favicon.ico" alt="Google" width="18">
                         Sign up with Google

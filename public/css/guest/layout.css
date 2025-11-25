@@ -19,6 +19,11 @@
 .modern-link:hover::after {
     width: 100%;
 }
+
+.upgrade input, .upgrade textarea{
+    font-size: 14px;
+}
+
 .page-fade {
     opacity: 0;
     transform: translateY(10px);
