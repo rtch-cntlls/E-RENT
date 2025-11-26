@@ -4,17 +4,12 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h3 class="fw-bold">Host Profile: {{ $host->name }}</h3>
-        <a href="{{ route('admin.hosts.index') }}" class="btn btn-outline-secondary">
-            <i class="fas fa-arrow-left me-1"></i> Back to Hosts
-        </a>
     </div>
     <div class="card shadow-sm mb-4 border-0">
         <div class="card-body">
             <div class="row g-4">
                 <div class="col-md-4 text-center">
                     <img src="{{ asset('images/default.png') }}" alt="Test" class="img-fluid">
-
-                    
                     <div class="mt-3">
                         <span class="badge {{ $host->hostProfile && $host->hostProfile->status ? 'bg-success' : 'bg-secondary' }}">
                             {{ $host->hostProfile && $host->hostProfile->status ? 'Active' : 'Inactive' }}

@@ -3,7 +3,7 @@
 @section('content')
 @include('components.sweetAlert')
 <div class="min-vh-100 d-flex align-items-center justify-content-center bg-light page-fade">
-    <div class="container mt-5">
+    <div class="container mt-5 mb-4">
         <div class="row justify-content-center shadow-sm overflow-hidden bg-white">
             <div class="col-lg-5 col-md-8 p-5">
                 <div class="text-center mb-3">

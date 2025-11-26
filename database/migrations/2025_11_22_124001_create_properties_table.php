@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('type');
             $table->string('address');
             $table->decimal('price', 10, 2);
+            $table->integer('fixed_days')->nullable();
             $table->json('amenities')->nullable();
             $table->timestamps();
         });

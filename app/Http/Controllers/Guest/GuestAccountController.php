@@ -28,12 +28,15 @@ class GuestAccountController extends Controller
             'id_document' => 'required|file|mimes:jpg,jpeg,png,pdf|max:5120',
             'agreement' => 'required|accepted',
         ]);
-    
+
         $user = Auth::user();
 
         $path = null;
         if ($request->hasFile('id_document')) {
-            $path = $request->file('id_document')->store('id_documents', 'public');
+            $file = $request->file('id_document');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('id_documents'), $filename);
+            $path = 'id_documents/' . $filename;
         }
 
         HostProfile::create([
@@ -43,7 +46,7 @@ class GuestAccountController extends Controller
             'id_document' => $path,
             'status' => 'pending',
         ]);
-    
-        return redirect()->route('guest.landing')->with('success', 'Your request has been submitted. Await approval.');
+
+        return redirect()->route('guest.upgrade.form')->with('success', 'Your request has been submitted. Await approval.');
     }
 }

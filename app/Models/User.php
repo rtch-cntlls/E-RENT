@@ -36,5 +36,10 @@ class User extends Authenticatable
         return $this->hasOne(HostProfile::class);
     }
 
+    public function properties()
+    {
+        return $this->hasMany(Property::class);
+    }
+
     protected $with = ['hostProfile'];
 }

@@ -46,9 +46,30 @@
                         </li>
                     </ul>                    
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.hosts.index') }}"> Hosts</a>
-                </li>              
+                <li class="nav-item dropdown">
+                    <a class="text-dark nav-link d-flex align-items-center" href="#" id="hostsDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Hosts
+                        <i class="ms-1 fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-wide" aria-labelledby="hostsDropdown">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center p-3" href="{{ route('admin.hosts.pending') }}">
+                                <i class="fas fa-hourglass-half me-3"></i> Pending
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center p-3" href="{{ route('admin.hosts.approved') }}">
+                                <i class="fas fa-check-circle me-3"></i> Approved
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center p-3" href="{{ route('admin.hosts.rejected') }}">
+                                <i class="fas fa-times-circle me-3"></i> Rejected
+                            </a>
+                        </li>
+                    </ul>
+                </li>                            
                 <li class="nav-item">
                     <a class="nav-link" href="#">Properties</a>
                 </li>

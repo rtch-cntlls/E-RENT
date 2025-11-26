@@ -20,10 +20,16 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav gap-3 align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold modern-link" href="{{ url('/') }}">Home</a>
+                        <a class="nav-link fw-semibold modern-link d-flex align-items-center gap-2" href="{{ url('/') }}">
+                            <img src="{{ asset('images/home.png') }}" alt="Home" width="22" height="22">
+                            <span>Home</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold modern-link" href="#properties">Properties</a>
+                        <a class="nav-link fw-semibold modern-link d-flex align-items-center gap-2" href="#properties">
+                            <img src="{{ asset('images/property.png') }}" alt="Properties" width="22" height="22">
+                            <span>Properties</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -54,9 +60,17 @@
                                     </div>
                                 </div>
                            </a> 
-                           <a class="dropdown-item fw-medium rounded" href="{{ route('guest.upgrade.form') }}">
-                                Convent to host account
-                            </a><hr>
+                           @if(auth()->user()->role !== 'host')
+                                <a class="dropdown-item fw-medium rounded" href="{{ route('guest.upgrade.form') }}">
+                                    Convert to host account
+                                </a>
+                                <hr>
+                            @endif
+                            @if(auth()->user()->role === 'host')
+                                <a class="dropdown-item fw-medium rounded"  href="{{ route('host.dashboard') }}">
+                                    Host Dashboard
+                                </a>
+                            @endif
                             <li>
                                 <a class="dropdown-item fw-semibold rounded py-2" href="{{ route('guest.settings') }}">
                                     Account Settings

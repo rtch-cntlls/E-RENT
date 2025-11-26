@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('host_profiles', function (Blueprint $table) {
+        Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('phone');
-            $table->string('address');
-            $table->string('id_document');
+            $table->foreignId('property_id')->constrained()->onDelete('cascade');
+            $table->foreignId('guest_id')->constrained('users')->onDelete('cascade');
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
+            $table->decimal('amount', 10, 2);
+            $table->date('check_in')->nullable();
+            $table->date('check_out')->nullable();
             $table->timestamps();
         });
-        
     }
 
     /**
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('host_profiles');
+        Schema::dropIfExists('bookings');
     }
 };

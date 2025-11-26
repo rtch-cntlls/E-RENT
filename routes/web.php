@@ -12,18 +12,27 @@ use App\Http\Controllers\Auth\GuestLoginController;
 use App\Http\Controllers\Auth\GuestRegisterController;
 use App\Http\Controllers\Auth\GoogleController;
 
+use App\Http\Controllers\Host\HostDashboardController;
+use App\Http\Controllers\Host\HostPropertyController;
+
 Route::prefix('admin')->group(function () {
+
     Route::get('login', [AdminLoginController::class, 'index'])->name('admin.login');
     Route::post('login', [AdminLoginController::class, 'login'])->name('admin.login.submit');
 
     Route::middleware([AdminAuth::class])->group(function () {
         Route::get('Overview', [DashboardController::class, 'index'])->name('admin.dashboard');
-        Route::get('Lister', [DashboardController::class, 'hostAnalytics'])->name('admin.host');
-        Route::get('hosts', [HostController::class, 'index'])->name('admin.hosts.index');
+        Route::get('Hosts', [DashboardController::class, 'hostAnalytics'])->name('admin.host');
+        Route::get('hosts/pending', [HostController::class, 'pending'])->name('admin.hosts.pending');
+        Route::get('hosts/approved', [HostController::class, 'approved'])->name('admin.hosts.approved');
+        Route::get('hosts/rejected', [HostController::class, 'rejected'])->name('admin.hosts.rejected');
+        Route::post('/hosts/{id}/approve', [HostController::class, 'approve'])->name('admin.hosts.approve');
         Route::get('hosts/{id}', [HostController::class, 'show'])->name('admin.hosts.show');
         Route::post('logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
     });
+
 });
+
 
 Route::get('/', [LandingPageController::class, 'index'])->name('guest.landing');
 Route::get('login/google', [GoogleController::class, 'redirectToGoogle'])->name('login.google');
@@ -40,4 +49,14 @@ Route::prefix('guest')->group(function () {
     Route::get('settings', [GuestSettingsController::class, 'index'])->name('guest.settings');
     Route::get('/upgrade-to-host', [GuestAccountController::class, 'showUpgradeForm'])->name('guest.upgrade.form');
     Route::post('/upgrade-to-host', [GuestAccountController::class, 'submitUpgradeRequest'])->name('guest.upgrade.submit');
+});
+
+Route::prefix('host')->middleware(['auth'])->group(function () {
+    Route::get('dashboard', [HostDashboardController::class, 'index'])->name('host.dashboard');
+    Route::get('properties', [HostPropertyController::class, 'index'])->name('host.properties');
+
+    Route::get('properties/create', [HostPropertyController::class, 'create'])->name('host.properties.create');
+    Route::post('properties', [HostPropertyController::class, 'store'])->name('host.properties.store');
+    
+    Route::get('bookings', [HostDashboardController::class, 'bookings'])->name('host.bookings');
 });

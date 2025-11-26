@@ -13,6 +13,7 @@ class Property extends Model
         'type',
         'address',
         'price',
+        'fixed_days',
         'amenities',
     ];
 

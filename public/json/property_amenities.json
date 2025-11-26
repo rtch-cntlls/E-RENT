@@ -1,0 +1,389 @@
+{
+    "House and Lot": [
+      "Bathroom",
+      "Hair dryer",
+      "Shampoo",
+      "Body soap",
+      "Bidet",
+      "Outdoor shower",
+      "Hot water",
+      "Washer",
+      "Towels, bed sheets, soap, and toilet paper",
+      "Hangers",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Dishes and silverware",
+      "Pool",
+      "Paid parking on premises",
+      "Self check-in"
+    ],
+    "Condominium Unit": [
+      "Bathroom",
+      "Hair dryer",
+      "Shampoo",
+      "Body soap",
+      "Hot water",
+      "Washer",
+      "Towels, bed sheets, soap, and toilet paper",
+      "Hangers",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Pool",
+      "Elevator",
+      "Paid parking on premises",
+      "Self check-in"
+    ],
+    "Townhouse": [
+      "Bathroom",
+      "Hot water",
+      "Washer",
+      "Towels, bed sheets, soap, and toilet paper",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Cooking basics",
+      "Dining table",
+      "Paid parking on premises"
+    ],
+    "Apartment": [
+      "Bathroom",
+      "Hot water",
+      "Washer",
+      "Towels, bed sheets, soap, and toilet paper",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Dining table",
+      "Self check-in"
+    ],
+    "Studio Unit": [
+      "Bathroom",
+      "Hot water",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Dining table",
+      "Self check-in"
+    ],
+    "Dormitory Room": [
+      "Bathroom",
+      "Hot water",
+      "Towels",
+      "Bed linens",
+      "Air conditioning",
+      "Wifi",
+      "Shared kitchen",
+      "Self check-in"
+    ],
+    "Boarding House Room": [
+      "Bathroom",
+      "Hot water",
+      "Towels",
+      "Bed linens",
+      "Air conditioning",
+      "Wifi",
+      "Shared kitchen"
+    ],
+    "Villa": [
+      "Bathroom",
+      "Hot water",
+      "Washer",
+      "Towels, bed sheets, soap, and toilet paper",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Pool",
+      "Private patio",
+      "Paid parking on premises"
+    ],
+    "Bungalow": [
+      "Bathroom",
+      "Hot water",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Private patio",
+      "Pool"
+    ],
+    "Penthouse Unit": [
+      "Bathroom",
+      "Hot water",
+      "Washer",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Pool",
+      "Elevator",
+      "Paid parking on premises"
+    ],
+    "Loft Type Unit": [
+      "Bathroom",
+      "Hot water",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Cooking basics",
+      "Dining table"
+    ],
+    "Room for Rent": [
+      "Bathroom",
+      "Hot water",
+      "Towels",
+      "Bed linens",
+      "Wifi",
+      "Shared kitchen"
+    ],
+    "Shared Room / Bedspace": [
+      "Bathroom",
+      "Hot water",
+      "Towels",
+      "Bed linens",
+      "Wifi",
+      "Shared kitchen"
+    ],
+    "Bahay Kubo / Native House": [
+      "Bathroom",
+      "Hot water",
+      "Air conditioning",
+      "Kitchen",
+      "Refrigerator",
+      "Cooking basics",
+      "Outdoor area"
+    ],
+    "Rest House": [
+      "Bathroom",
+      "Hot water",
+      "Air conditioning",
+      "Kitchen",
+      "Refrigerator",
+      "Pool",
+      "Outdoor dining"
+    ],
+    "Office Space": [
+      "Wifi",
+      "Air conditioning",
+      "Dedicated workspace",
+      "Conference table",
+      "Parking on premises"
+    ],
+    "Commercial Space / Shop Space": [
+      "Wifi",
+      "Parking",
+      "Air conditioning",
+      "Storage area"
+    ],
+    "Retail Stall / Kiosk": [
+      "Parking",
+      "Wifi",
+      "Electricity"
+    ],
+    "Warehouse": [
+      "Parking",
+      "Electricity",
+      "Storage racks"
+    ],
+    "Industrial Space": [
+      "Parking",
+      "Electricity",
+      "Loading dock"
+    ],
+    "Restaurant Space": [
+      "Kitchen",
+      "Refrigerator",
+      "Cooking equipment",
+      "Parking"
+    ],
+    "Commercial Kitchen": [
+      "Refrigerator",
+      "Cooking equipment",
+      "Hot water",
+      "Electricity"
+    ],
+    "Coworking Space": [
+      "Wifi",
+      "Air conditioning",
+      "Shared workspace",
+      "Printer",
+      "Coffee machine"
+    ],
+    "Clinic Space": [
+      "Wifi",
+      "Air conditioning",
+      "Waiting area",
+      "Parking"
+    ],
+    "Service Center Space": [
+      "Parking",
+      "Electricity",
+      "Wifi"
+    ],
+    "Entire Home (Short-Term)": [
+      "Bathroom",
+      "Hot water",
+      "Washer",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Pool",
+      "Self check-in"
+    ],
+    "Private Room": [
+      "Bathroom",
+      "Hot water",
+      "Towels",
+      "Bed linens",
+      "Air conditioning",
+      "Wifi",
+      "Shared kitchen"
+    ],
+    "Shared Room": [
+      "Bathroom",
+      "Hot water",
+      "Towels",
+      "Bed linens",
+      "Wifi",
+      "Shared kitchen"
+    ],
+    "Serviced Apartment": [
+      "Bathroom",
+      "Hot water",
+      "Washer",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics",
+      "Pool"
+    ],
+    "Vacation House": [
+      "Bathroom",
+      "Hot water",
+      "Washer",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Pool",
+      "Outdoor dining",
+      "Paid parking"
+    ],
+    "Beach House": [
+      "Bathroom",
+      "Hot water",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Pool",
+      "Private patio",
+      "Outdoor dining"
+    ],
+    "Transient Room": [
+      "Bathroom",
+      "Hot water",
+      "Towels",
+      "Bed linens",
+      "Air conditioning",
+      "Wifi"
+    ],
+    "Cabin": [
+      "Bathroom",
+      "Hot water",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Outdoor area"
+    ],
+    "Cottage": [
+      "Bathroom",
+      "Hot water",
+      "Air conditioning",
+      "Wifi",
+      "Kitchen",
+      "Outdoor area"
+    ],
+    "Farm Stay": [
+      "Bathroom",
+      "Hot water",
+      "Wifi",
+      "Kitchen",
+      "Outdoor area",
+      "Parking"
+    ],
+    "Resort Villa": [
+      "Bathroom",
+      "Hot water",
+      "Air conditioning",
+      "Wifi",
+      "Pool",
+      "Kitchen",
+      "Outdoor dining"
+    ],
+    "Event Venue / Function Hall": [
+      "Parking",
+      "Wifi",
+      "Air conditioning",
+      "Tables and chairs"
+    ],
+    "Conference Space": [
+      "Projector",
+      "Wifi",
+      "Air conditioning",
+      "Tables and chairs"
+    ],
+    "Training Room": [
+      "Whiteboard",
+      "Projector",
+      "Wifi",
+      "Air conditioning",
+      "Tables and chairs"
+    ],
+    "Parking Space": [
+      "Covered parking",
+      "Security cameras"
+    ],
+    "Garage": [
+      "Covered parking",
+      "Electricity"
+    ],
+    "Storage Unit": [
+      "Secure access",
+      "Electricity"
+    ],
+    "Agricultural Land": [
+      "Fencing",
+      "Irrigation access"
+    ],
+    "Farm Land": [
+      "Fencing",
+      "Water source"
+    ]
+  }
+  

@@ -11,8 +11,6 @@ class HostProfile extends Model
         'phone',
         'address',
         'id_document',
-        'profile_picture',
-        'requirements_completed',
         'status',
     ];
 
