@@ -32,6 +32,42 @@
     </div>
 </section>
 <section id="properties" class="py-5 bg-light">
-   
+    <div class="container">
+        <h3 class="mb-4">Latest Properties</h3>
+        @if($properties->isEmpty())
+            <div class="alert alert-info text-center">No properties available at the moment.</div>
+        @else
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+                @foreach($properties->take(10) as $property)
+                    <div class="col">
+                        <a href="{{ route('guest.property.show', $property->id) }}" class="text-decoration-none text-dark">
+                            <div class="card h-100 shadow-sm border-0 hover-shadow">
+                                @if($property->images->isNotEmpty())
+                                    <img src="{{ asset($property->images->first()->image_path) }}" 
+                                        class="card-img-top" 
+                                        style="height: 150px; object-fit: cover;" 
+                                        alt="Property Image">
+                                @else
+                                    <div class="card-img-top d-flex align-items-center justify-content-center bg-light" style="height: 150px;">
+                                        <i class="fas fa-home fa-2x text-muted"></i>
+                                    </div>
+                                @endif
+                                <div class="card-body p-2 d-flex flex-column">
+                                    <div class="d-flex align-items-center gap-1">
+                                        <small class="fw-medium text-truncate d-inline-block">
+                                            {{ ucfirst($property->type) }} in {{ $property->address }}
+                                        </small>
+                                    </div>                                
+                                    <small class="mb-1">₱{{ number_format($property->price, 2) }} 
+                                        @if($property->fixed_days) for {{ $property->fixed_days }} days @endif
+                                    </small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>        
+        @endif
+    </div>
 </section>
 @endsection

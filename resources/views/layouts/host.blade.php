@@ -42,26 +42,9 @@
         </nav>
         <div class="flex-grow-1" style="margin-left: 240px;">
                 <nav class="navbar navbar-expand-lg navbar-light px-4 py-3 shadow-sm">
-                    <div class="container-fluid d-flex justify-content-between align-items-center">
-                        <div>
-                            <h6 class="mb-1 text-muted">
-                                @php
-                                    $hour = date('H');
-                                    if ($hour < 12) {
-                                        $greeting = 'Good Morning';
-                                    } elseif ($hour < 18) {
-                                        $greeting = 'Good Afternoon';
-                                    } else {
-                                        $greeting = 'Good Evening';
-                                    }
-                                @endphp
-                                {{ $greeting }}, <span>{{ auth()->user()->name }}</span>!
-                            </h6>
-                        </div>
-                        <a href="{{ url('/') }}" class="btn btn-sm btn-outline-primary d-flex align-items-center gap-2">
-                            <i class="fas fa-globe"></i> Back to Website
-                        </a>
-                    </div>
+                    <a href="{{ url('/') }}" class="btn btn-sm btn-outline-primary d-flex align-items-center gap-2">
+                        <i class="fas fa-globe"></i> Back to Website
+                    </a>
                 </nav>      
             <main class="p-4">
                 @yield('content')

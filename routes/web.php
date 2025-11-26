@@ -45,10 +45,13 @@ Route::prefix('guest')->group(function () {
     Route::post('register', [GuestRegisterController::class, 'store'])->name('guest.register.submit');
     Route::post('logout', [GuestLoginController::class, 'logout'])->name('guest.logout');
 
-
+    
     Route::get('settings', [GuestSettingsController::class, 'index'])->name('guest.settings');
     Route::get('/upgrade-to-host', [GuestAccountController::class, 'showUpgradeForm'])->name('guest.upgrade.form');
     Route::post('/upgrade-to-host', [GuestAccountController::class, 'submitUpgradeRequest'])->name('guest.upgrade.submit');
+
+    Route::get('properties/{property}', [LandingPageController::class, 'show'])->name('guest.property.show');
+
 });
 
 Route::prefix('host')->middleware(['auth'])->group(function () {
@@ -57,6 +60,6 @@ Route::prefix('host')->middleware(['auth'])->group(function () {
 
     Route::get('properties/create', [HostPropertyController::class, 'create'])->name('host.properties.create');
     Route::post('properties', [HostPropertyController::class, 'store'])->name('host.properties.store');
-    
+    Route::get('properties/{id}', [HostPropertyController::class, 'show'])->name('host.properties.show');
     Route::get('bookings', [HostDashboardController::class, 'bookings'])->name('host.bookings');
 });
