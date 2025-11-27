@@ -47,6 +47,11 @@ class HostPropertyController extends Controller
             'address' => 'required|string',
             'price' => 'required|numeric',
             'fixed_days' => 'nullable|integer|min:1',
+            'max_guests' => 'required|integer|min:1',
+            'bedrooms'   => 'required|integer|min:0',
+            'bathrooms'  => 'required|integer|min:0',
+            'beds'       => 'required|integer|min:0',
+    
             'amenities' => 'nullable|string',
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,avif|max:5120',
         ]);
@@ -54,15 +59,18 @@ class HostPropertyController extends Controller
         try {
             DB::transaction(function () use ($request) {
                 $property = Property::create([
-                    'user_id' => auth()->id(),
+                    'user_id'     => auth()->id(),
                     'description' => $request->description,
-                    'type' => $request->type,
-                    'address' => $request->address,
-                    'price' => $request->price,
-                    'fixed_days' => $request->fixed_days,
-                    'amenities' => $request->amenities,
+                    'type'        => $request->type,
+                    'address'     => $request->address,
+                    'price'       => $request->price,
+                    'fixed_days'  => $request->fixed_days,
+                    'max_guests'  => $request->max_guests,
+                    'bedrooms'    => $request->bedrooms,
+                    'bathrooms'   => $request->bathrooms,
+                    'beds'        => $request->beds,
+                    'amenities'   => $request->amenities,
                 ]);
-    
                 if ($request->hasFile('images')) {
                     foreach ($request->file('images') as $image) {
                         $filename = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
@@ -70,7 +78,7 @@ class HostPropertyController extends Controller
     
                         PropertyImage::create([
                             'property_id' => $property->id,
-                            'image_path' => 'properties/' . $filename,
+                            'image_path'  => 'properties/' . $filename,
                         ]);
                     }
                 }
@@ -81,5 +89,27 @@ class HostPropertyController extends Controller
         } catch (\Exception $e) {
             return back()->withErrors(['error' => 'Failed to create property: ' . $e->getMessage()]);
         }
+    }  
+    
+    public function update(Request $request, Property $property)
+    {
+        $request->validate([
+            'price' => 'required|numeric',
+            'fixed_days' => 'nullable|integer|min:1',
+            'max_guests' => 'required|integer|min:1',
+            'bedrooms' => 'required|integer|min:0',
+            'bathrooms' => 'required|integer|min:0',
+            'beds' => 'required|integer|min:0',
+        ]);
+
+        $property->update([
+            'price' => $request->price,
+            'fixed_days' => $request->fixed_days,
+            'max_guests' => $request->max_guests,
+            'bedrooms' => $request->bedrooms,
+            'bathrooms' => $request->bathrooms,
+            'beds' => $request->beds,
+        ]);
+        return redirect()->back()->with('success', 'Property updated successfully!');
     }
 }

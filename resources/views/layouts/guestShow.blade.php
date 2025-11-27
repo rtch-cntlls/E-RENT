@@ -98,55 +98,7 @@
     </nav>
     <main class="pt-5">
         @yield('content')
-    </main>
-    <footer id="contact" class="py-5 mt-5" style="background: #f9fafb;">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <h4 class="fw-bold mb-2">E-rent</h4>
-                    <p class="text-muted mb-3" style="max-width: 260px;">
-                        A simple and reliable platform for listing properties and booking stays with ease.
-                    </p>
-                    <div class="d-flex gap-3 mt-3">
-                        <i class="fab fa-facebook fa-lg text-muted"></i>
-                        <i class="fab fa-instagram fa-lg text-muted"></i>
-                        <i class="fab fa-twitter fa-lg text-muted"></i>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <h6 class="fw-semibold mb-3">Explore</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="#" class="text-muted text-decoration-none d-block mb-2">About Us</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none d-block mb-2">List Your Property</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none d-block mb-2">How It Works</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none d-block">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <h6 class="fw-semibold mb-3">Legal</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="#" class="text-muted text-decoration-none d-block mb-2">Privacy Policy</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none d-block mb-2">Terms of Service</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none d-block">Cookie Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h6 class="fw-semibold mb-2">Stay Updated</h6>
-                    <p class="text-muted small mb-3">
-                        Join our mailing list to receive new rental listings and updates.
-                    </p>
-                    <form class="d-flex">
-                        <input type="email" class="form-control rounded-pill me-2" placeholder="Your email">
-                        <button class="btn btn-dark rounded-pill px-4">Join</button>
-                    </form>
-                </div>
-            </div>
-            <hr class="mt-5 mb-3">
-            <div class="text-center small text-muted">
-                &copy; 2025 E-rent. All rights reserved.
-            </div>
-        </div>
-    </footer>    
+    </main>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

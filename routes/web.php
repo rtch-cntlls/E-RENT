@@ -61,5 +61,6 @@ Route::prefix('host')->middleware(['auth'])->group(function () {
     Route::get('properties/create', [HostPropertyController::class, 'create'])->name('host.properties.create');
     Route::post('properties', [HostPropertyController::class, 'store'])->name('host.properties.store');
     Route::get('properties/{id}', [HostPropertyController::class, 'show'])->name('host.properties.show');
+    Route::post('properties/{property}', [HostPropertyController::class, 'update'])->name('host.properties.update');
     Route::get('bookings', [HostDashboardController::class, 'bookings'])->name('host.bookings');
 });

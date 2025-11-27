@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/host/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('css/host/index.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="bg-light">
     <div class="d-flex">

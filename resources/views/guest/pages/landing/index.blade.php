@@ -70,4 +70,92 @@
         @endif
     </div>
 </section>
+<section class="py-5" style="
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: #fff;">
+    <div class="container text-center py-5">
+        <div class="mx-auto mb-4" style="max-width: 650px;">
+            <h3 class="fw-bold mb-3">Become a Host. Earn with E-Rent.</h3>
+            <p class="text-light mb-4">
+                Turn your extra space into income. List your property, manage bookings effortlessly, and
+                welcome guests with confidence using our streamlined hosting tools.
+            </p>
+        </div>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <div class="p-3 px-4 rounded-3 bg-dark bg-opacity-25 border border-secondary small">
+                ✔ Easy Property Listing
+            </div>
+            <div class="p-3 px-4 rounded-3 bg-dark bg-opacity-25 border border-secondary small">
+                ✔ Secure Booking System
+            </div>
+            <div class="p-3 px-4 rounded-3 bg-dark bg-opacity-25 border border-secondary small">
+                ✔ Manage Guests & Payments
+            </div>
+        </div>
+        <a href="{{ route('guest.upgrade.form') }}" 
+           class="btn btn-light mt-4 px-5 fw-semibold shadow-sm">
+            Upgrade to Host
+        </a>
+    </div>
+</section>
+<section id="about" class="py-5" style="background: #f9fafb;">
+    <div class="container">
+
+        <div class="text-center mb-5" style="max-width: 700px; margin: auto;">
+            <h3 class="fw-bold mb-3">About E-Rent</h3>
+            <p class="text-muted" style="font-size: 15px;">
+                E-Rent is your trusted rental platform designed to make property searching and hosting
+                simple, secure, and convenient. Whether you’re looking for a place to stay or a way to earn,
+                E-Rent helps you make smart rental decisions with ease.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border border-light">
+                    <div class="mb-3">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle"
+                              style="width: 48px; height: 48px; background:#e8f0ff;">
+                            <i class="fas fa-search text-primary"></i>
+                        </span>
+                    </div>
+                    <h5 class="fw-semibold mb-2">Smart Property Search</h5>
+                    <p class="text-muted small">
+                        Discover rentals faster using intuitive filters for location, property type, budget,
+                        and more—ensuring you find the perfect match effortlessly.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border border-light">
+                    <div class="mb-3">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle"
+                              style="width: 48px; height: 48px; background:#e8fff1;">
+                            <i class="fas fa-shield-alt text-success"></i>
+                        </span>
+                    </div>
+                    <h5 class="fw-semibold mb-2">Safe & Verified Listings</h5>
+                    <p class="text-muted small">
+                        Every property is uploaded and managed by verified hosts, providing renters with
+                        security, transparency, and peace of mind throughout their stay.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border border-light">
+                    <div class="mb-3">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle"
+                              style="width: 48px; height: 48px; background:#fff4e5;">
+                            <i class="fas fa-mobile-alt text-warning"></i>
+                        </span>
+                    </div>
+                    <h5 class="fw-semibold mb-2">Seamless Booking</h5>
+                    <p class="text-muted small">
+                        Manage reservations, communicate with hosts, and track your stay all in one clean,
+                        easy-to-use platform available on any device.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><hr>
 @endsection

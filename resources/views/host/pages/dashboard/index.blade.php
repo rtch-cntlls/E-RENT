@@ -26,8 +26,8 @@
     </div>
     <div class="col-md-3">
         <div class="card shadow-sm p-3 text-center">
-            <h4>₱</h4>
-            <h6 class="mb-1">Total Revenue</h6>
+            <i class="fas fa-coins fa-2x text-secondary mb-2"></i>
+            <h6 class="mb-1 text-muted">Total Revenue</h6>
             <h4>₱{{ number_format($revenue ?? 0, 2) }}</h4>
         </div>
     </div>
@@ -82,12 +82,12 @@
             <canvas id="bookingsChart" height="200"></canvas>
         </div>
     </div>
-    <div class="col-md-6">
+    {{-- <div class="col-md-6">
         <div class="card shadow-sm p-3">
             <h6 class="fw-semibold mb-3">Revenue Distribution</h6>
             <canvas id="revenueChart" height="200"></canvas>
         </div>
-    </div>
+    </div> --}}
 </div>
 <script>
     const bookingsChart = new Chart(document.getElementById('bookingsChart'), {

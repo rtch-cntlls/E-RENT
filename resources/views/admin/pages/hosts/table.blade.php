@@ -30,7 +30,7 @@
                                 {{ ucfirst($host->hostProfile->status) }}
                             </span>
                         </td>
-                        <td>-</td>
+                        <td>{{ $host->properties_count }}</td>
                         <td>{{ $host->created_at->format('M d, Y') }}</td>
                         <td class="d-flex gap-2">
                             @if($host->hostProfile->status === 'pending')
@@ -38,6 +38,11 @@
                                     data-bs-target="#approveModal{{ $host->id }}">
                                     Approve
                                 </button>
+                            @elseif($host->hostProfile->status === 'approved')
+                                <a href="{{ route('admin.hosts.show', $host->id) }}" 
+                                   class="btn btn-sm btn-primary">
+                                   View
+                                </a>
                             @endif
                         </td>
                     </tr>

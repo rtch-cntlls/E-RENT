@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('address');
             $table->decimal('price', 10, 2);
             $table->integer('fixed_days')->nullable();
+            $table->integer('max_guests')->nullable();
+            $table->integer('bedrooms')->nullable();
+            $table->integer('bathrooms')->nullable();
+            $table->integer('beds')->nullable();
             $table->json('amenities')->nullable();
             $table->timestamps();
         });

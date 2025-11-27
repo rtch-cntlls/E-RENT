@@ -1,11 +1,16 @@
 @extends('layouts.host')
 @section('title', 'Property Details • E-Rent')
 @section('content')
+@include('components.sweetAlert')
 <div class="container">
-    <div class="mb-4">
+    <div class="mb-2 d-flex justify-content-between align-items-center">
         <a href="{{ route('host.properties') }}" class="text-decoration-none text-dark d-flex align-items-center">
             <i class="fas fa-arrow-left me-2"></i> Back to My Properties
         </a>
+        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editPropertyModal">
+            <i class="fas fa-edit me-1"></i> Edit Property
+        </button>
+        @include('host.pages.properties.edit')
     </div>
     <div class="row mb-5">
         <div class="col-12">
@@ -18,7 +23,27 @@
                             <p class="mb-1"><span class="fw-medium">Minimum Stay:</span> {{ $property->fixed_days }} days</p>
                         @endif
                         <p class="mb-1"><span class="fw-medium">Listed At:</span> {{ $property->created_at->format('M d, Y') }}</p>
-                        <p class="mb-1"><span class="fw-medium">Total Bookings:</span> </p>
+                        <div class="mt-3">
+                            <h6 class="fw-semibold mb-2">Property Capacity</h6>                 
+                            <div class="d-flex flex-wrap gap-3">
+                                <span class="badge bg-light text-dark border px-3 py-2">
+                                    <i class="fas fa-users me-1"></i>
+                                    Max Guests: <strong>{{ $property->max_guests ?? 0 }}</strong>
+                                </span>
+                                <span class="badge bg-light text-dark border px-3 py-2">
+                                    <i class="fas fa-bed me-1"></i>
+                                    Bedrooms: <strong>{{ $property->bedrooms ?? 0 }}</strong>
+                                </span>
+                                <span class="badge bg-light text-dark border px-3 py-2">
+                                    <i class="fas fa-bath me-1"></i>
+                                    Bathrooms: <strong>{{ $property->bathrooms ?? 0 }}</strong>
+                                </span>
+                                <span class="badge bg-light text-dark border px-3 py-2">
+                                    <i class="fas fa-bed-pulse me-1"></i>
+                                    Beds: <strong>{{ $property->beds ?? 0 }}</strong>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <p class="small mb-3">{{ $property->description ?? 'No Description Available' }}</p>

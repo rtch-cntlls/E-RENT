@@ -14,6 +14,10 @@ class Property extends Model
         'address',
         'price',
         'fixed_days',
+        'max_guests',
+        'bedrooms',
+        'bathrooms',
+        'beds',
         'amenities',
     ];
 

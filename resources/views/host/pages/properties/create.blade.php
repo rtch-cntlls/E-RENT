@@ -1,6 +1,7 @@
 @extends('layouts.host')
 @section('title', 'Add Property • E-Rent')
 @section('content')
+@include('components.sweetAlert')
 <div class="container create-property">
     <div class="card shadow-sm border-0 p-4">
         <form action="{{ route('host.properties.store') }}" method="POST" enctype="multipart/form-data">
@@ -70,6 +71,54 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="mb-2">
+                        <label for="max_guests" class="form-label fw-semibold small">Max Guests</label>
+                        <div class="input-group rounded-3">
+                            <span class="input-group-text bg-light"><i class="fas fa-users"></i></span>
+                            <input type="number" name="max_guests" id="max_guests" class="form-control rounded-end @error('max_guests') is-invalid @enderror" value="{{ old('max_guests') }}" placeholder="e.g. 4" min="1">
+                            @error('max_guests')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-2">
+                        <label for="bedrooms" class="form-label fw-semibold small">Bedrooms</label>
+                        <div class="input-group rounded-3">
+                            <span class="input-group-text bg-light"><i class="fas fa-bed"></i></span>
+                            <input type="number" name="bedrooms" id="bedrooms" class="form-control rounded-end @error('bedrooms') is-invalid @enderror" value="{{ old('bedrooms') }}" placeholder="e.g. 2" min="0">
+                            @error('bedrooms')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-2">
+                        <label for="bathrooms" class="form-label fw-semibold small">Bathrooms</label>
+                        <div class="input-group rounded-3">
+                            <span class="input-group-text bg-light"><i class="fas fa-shower"></i></span>
+                            <input type="number" name="bathrooms" id="bathrooms" class="form-control rounded-end @error('bathrooms') is-invalid @enderror" value="{{ old('bathrooms') }}" placeholder="e.g. 1" min="0">
+                            @error('bathrooms')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-2">
+                        <label for="beds" class="form-label fw-semibold small">Beds</label>
+                        <div class="input-group rounded-3">
+                            <span class="input-group-text bg-light"><i class="fas fa-bed-pulse"></i></span>
+                            <input type="number" name="beds" id="beds" class="form-control rounded-end @error('beds') is-invalid @enderror" value="{{ old('beds') }}" placeholder="e.g. 3" min="0">
+                            @error('beds')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>                
                 <div class="col-md-6">
                     <div class="mb-2">
                         <label for="fixed_days" class="form-label fw-semibold small">Fixed Days <small class="text-muted">(optional)</small></label>
